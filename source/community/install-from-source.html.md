@@ -238,3 +238,7 @@ bin/rake evm:start
 ```
 
 You should now be able to access the ManageIQ console at **\<IP_ADDRESS\>:3000**. The default username and password is `username : admin` and `password : smartvm`
+
+Note: If you are running the appliance on a CentOS 7 and you want to access this from other machine , take a look to the CentOS firewall because they may are blocking the port 3000. If this is your case you can unblock the port with:
+```zsh
+firewall-cmd --permanent --zone=public --add-port=3000/tcp
